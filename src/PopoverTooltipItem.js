@@ -53,40 +53,64 @@ class PopoverTooltipItem extends React.PureComponent<Props> {
     if (this.props.label === strings("lang.reply")) {
       return (
         <View style={[styles.itemContainer, this.props.containerStyle]}>
-          <View style={{ flexDirection: "row" }}>
-            <Icon
-              type="Entypo"
-              name="reply"
-              style={{ fontSize: 16, color: "black", paddingRight: 10 }}
-            />
-            <TouchableOpacity onPress={this.onPress}>{label}</TouchableOpacity>
-          </View>
+          <TouchableOpacity onPress={this.onPress}>
+            <View
+              style={{
+                flexDirection: "row",
+                paddingLeft: 10,
+                paddingRight: 10
+              }}
+            >
+              <Icon
+                type="Entypo"
+                name="reply"
+                style={{ fontSize: 16, color: "black", paddingRight: 15 }}
+              />
+              {label}
+            </View>
+          </TouchableOpacity>
         </View>
       );
     } else if (this.props.label === strings("lang.copy")) {
       return (
         <View style={[styles.itemContainer, this.props.containerStyle]}>
-          <View style={{ flexDirection: "row" }}>
-            <Icon
-              type="FontAwesome5"
-              name="copy"
-              style={{ fontSize: 16, color: "black", paddingRight: 10 }}
-            />
-            <TouchableOpacity onPress={this.onPress}>{label}</TouchableOpacity>
-          </View>
+          <TouchableOpacity onPress={this.onPress}>
+            <View
+              style={{
+                flexDirection: "row",
+                paddingLeft: 10,
+                paddingRight: 10
+              }}
+            >
+              <Icon
+                type="FontAwesome5"
+                name="copy"
+                style={{ fontSize: 16, color: "black", paddingRight: 15 }}
+              />
+              {label}
+            </View>
+          </TouchableOpacity>
         </View>
       );
     } else if (this.props.label === strings("lang.del")) {
       return (
         <View style={[styles.itemContainer, this.props.containerStyle]}>
-          <View style={{ flexDirection: "row" }}>
-            <Icon
-              type="FontAwesome5"
-              name="trash"
-              style={{ fontSize: 16, color: "black", paddingRight: 10 }}
-            />
-            <TouchableOpacity onPress={this.onPress}>{label}</TouchableOpacity>
-          </View>
+          <TouchableOpacity onPress={this.onPress}>
+            <View
+              style={{
+                flexDirection: "row",
+                paddingLeft: 10,
+                paddingRight: 10
+              }}
+            >
+              <Icon
+                type="FontAwesome5"
+                name="trash"
+                style={{ fontSize: 16, color: "black", paddingRight: 15 }}
+              />
+              {label}
+            </View>
+          </TouchableOpacity>
         </View>
       );
     } else {
